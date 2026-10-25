@@ -2864,11 +2864,36 @@
     "ee0451642e48d67690bfc141af294b9810accb2d",
     "7023a395fc88a7948a8ebf03a0272660a96622fc"
   ],
+  "https://github.com/holo-routing/holo/pull/103": [
+    "17e0d9fa3ce1dc1efd6a564ffde76c944f3ad843",
+    "4beba5cfee4f034dc5dc9913cf5a3801cbb202b4"
+  ],
+  "https://github.com/holo-routing/holo/pull/104": [
+    "6c4139c4b98ed86b04cb9d922080c1ed8b6b1061"
+  ],
+  "https://github.com/holo-routing/holo/pull/106": [
+    "02f912fbbbe87fbea212a516831befd042a62e19"
+  ],
+  "https://github.com/holo-routing/holo/pull/113": [
+    "3fe342e91a6bbef3b5f12bb5843e8f5f3c64810d"
+  ],
+  "https://github.com/holo-routing/holo/pull/115": [
+    "9b92385e048528fb147d80526b83b369b27133fe"
+  ],
+  "https://github.com/holo-routing/holo/pull/36": [
+    "82c392cc5cee2e37265b1d51f15a32479011c089"
+  ],
+  "https://github.com/holo-routing/holo/pull/72": [
+    "c3658e80f8322012b490f38d4d2796668cde4ff9"
+  ],
   "https://github.com/holo-routing/holo/pull/77": [
     "9238c1a7e8645420b878a7860b3543b18f1f3ee8",
     "13d6816352c9cfecdbf6fc8c7d7f6432f180f31e",
     "d228165724debd6695766612fa24b63717f6188d",
     "fd7ce8b8314236a4208f6f9dfdad0dc584e06a39",
     "cb38d2612fb3f7a02bf67504406f7b99dcd18ac2"
+  ],
+  "https://github.com/holo-routing/holo/pull/95": [
+    "5c167376f7e95fbc62f8f4b1ae04a4136f4b2d7f"
   ]
 }

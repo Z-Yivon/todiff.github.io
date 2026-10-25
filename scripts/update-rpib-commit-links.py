@@ -59,7 +59,7 @@ def required_commits(csv_path):
             if not any(value.strip() for value in row):
                 continue
             url = row[link_column].strip()
-            value = row[commit_column].strip()
+            value = row[commit_column].strip() or "1"
             if value and PULL_REQUEST.fullmatch(url):
                 maximum = max(int(ordinal.strip()) for ordinal in value.split("+"))
                 needed[url] = max(needed.get(url, 0), maximum)

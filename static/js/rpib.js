@@ -109,6 +109,7 @@
       var bugs = rows.filter(function (row) {
         return row[idIndex] && row[idIndex].trim();
       }).map(function (values) {
+        if (commitIndex >= 0 && !(values[commitIndex] || '').trim()) values[commitIndex] = '1';
         return {
           values: values,
           searchText: columns.map(function (column) { return values[column.index] || ''; }).join(' ').toLowerCase()
