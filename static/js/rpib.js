@@ -62,11 +62,12 @@
     value.split('+').forEach(function (part, index) {
       if (index) cell.appendChild(document.createTextNode('+'));
       var ordinal = part.trim();
-      var sha = commits[Number(ordinal) - 1];
-      var resolved = /^\d+$/.test(ordinal) && typeof sha === 'string' && /^[a-f0-9]{40}$/i.test(sha);
+      var position = Number(ordinal) - 1;
+      var matched = /^\d+$/.test(ordinal) && position >= 0 && position < commits.length;
+      var sha = commits[matched ? position : 0];
+      var resolved = typeof sha === 'string' && /^[a-f0-9]{40}$/i.test(sha);
       var target = pullUrl + '/commits' + (resolved ? '/' + sha : '');
-      var title = resolved ? 'Commit ' + ordinal + ' in this pull request' :
-        (commits.length ? 'Commit ' + ordinal + ' is unavailable in the current PR history; view all commits' : 'View commits for this pull request');
+      var title = resolved ? (matched ? 'Commit ' + ordinal : 'First commit') + ' in this pull request' : 'View commits for this pull request';
       appendLink(cell, ordinal, target, title);
     });
   }
