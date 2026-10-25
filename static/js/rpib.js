@@ -49,14 +49,15 @@
       if (rows.length < 2) throw new Error('The bug dataset is empty.');
 
       var headers = rows.shift().map(function (header) {
-        return header.replace(/\s+/g, ' ').trim();
+        var label = header.replace(/\s+/g, ' ').trim();
+        return label.toLowerCase() === 'id' ? 'ID' : label;
       });
       var idIndex = headers.indexOf('ID');
       var linkIndex = headers.findIndex(function (header) { return header.toLowerCase() === 'link'; });
       if (idIndex < 0 || linkIndex < 0) throw new Error('Missing ID or link column.');
 
       var columns = headers.map(function (label, index) {
-        return { label: label === 'commit（第几个commit）' ? 'Commit' : label, index: index };
+        return { label: label === 'commit（第几个commit）' ? 'Commit ID' : label, index: index };
       }).filter(function (column) {
         return column.label && !['link', 'collected by'].includes(column.label.toLowerCase());
       });
